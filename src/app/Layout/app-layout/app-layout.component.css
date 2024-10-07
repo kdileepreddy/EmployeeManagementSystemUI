@@ -1,0 +1,39 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #sidenav{
+    
+    overflow-x: hidden;
+    
+  }
+  ::ng-deep .mat-drawer-inner-container {
+    overflow-x:hidden !important;
+  }
+  
+  #sidenav.menu-open{
+  width: 17vw;
+  }
+  
+  #sidenav.menu-close{
+  width: 7vw;
+  }
+  
+  .header {
+    position: sticky !important;
+  
+    top: 0;
+    z-index: 2;
+    /* overflow: hidden; */
+    left: 0;
+    right: 0;
+  }
+  .contentCss{
+    padding: 25px;
+    width: auto;
+    height: auto;
+  }

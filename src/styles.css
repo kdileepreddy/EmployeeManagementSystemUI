@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --dark-background1: #202325;
+  --dark-cell-background2: #202427;
+  --dark-background3: #1a1b1d;
+  --dark-background4: #1c2023;
+  --dark-font1: #cfb198;
+  --dark-font2: #dcc7b4;
+  --dark-font3: #dfc2ab;
+  --dark-font4: #bda998;
+  --dark-font5: #d9a57c;
+  --light-font1: #80766e;
+  --light-font2: #837c72;
+  --card-background1: #4c9883;
+  --card-background2: #e3af63;
+  --card-background3: #4f4e4c;
+  --card-background4: #d5a75a;
+  --card-background5: #f6ff8a;
+  --card-background6: #ebf8de;
+  --card-background7: #eacbd1;
+  --card-background8: #cc95bd;
+  --text-background1: #d7dcea;
+  --text-background2: #e3c2a6;
+  --text-transparent-background: #86878b;
+  --button-background1: #385ea7;
+  --button-background2: #1b1c1e;
+  
+  --fw-normal: 400;
+  --fw-bold: 700;
+  
+  --clr: #b7c9e5;
+}
+
+.credColorPalete {
+  /* background: rgba(255,255,255,0.2) !important; */
+  color: #d9a57c !important;
+  /* backdrop-filter: blur(10px); */
+}
+
+.credColorPaleteCard {
+  background-color: #4a678e !important;
+  color: #fff !important;
+}
+
+.credColorPaleteIcon {
+  color: #d9a57c;
+}
+
+.credColorPaleteTitle {
+  color: #d9a57c;
+}
+
+.credColorPaleteheader {
+  background-color: #202427;
+  color: #d9a57c;
+}
+
+.credColorPaletecontent {
+  background-color: #202427;
+}
+
+.credColorPalete-button {
+  /* background-color: #202427; */
+  color: #d9a57c;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  /* box-shadow: 
+    1rem 1rem 2rem #292d3099,
+    -1rem -1rem 2rem #2a2e3199 !important; */
+}
+
+.credColorPalete-button:hover {
+  border-radius: 5px;
+  box-shadow: 
+    inset 1rem 1rem 2rem #292d30,
+    inset -1rem -1rem 2rem #2a2e31 !important;
+}
+
+.credColorPaleteSearch {
+  background-color: #fff;
+  z-index: 1;
+}
+
+.credColorPaleteMenuItem {
+  background-color: #d9a57c;
+  color: #1c2023;
+  overflow-x: hidden !important;
+}
+
+.credColorPaletelikeButton {
+  background-color: #dae1eb;
+  color: #202427;
+}
+
+.credColorPaleteshareButton {
+  color: #1c2023;
+}
+
+.credColorPaletecardBtn {
+  background-color: #202427 !important;
+  color: #d9a57c !important;
+  border: 1px solid #202427 !important;
+}
+
+.credColorPaleteDivider {
+  background-color: #d9a57c;
+  height: 2px;
+}
+
+.credColorPaletesidebarcolor {
+  background-color: #1b1c1e;
+}
