@@ -16,14 +16,14 @@
     overflow: hidden;
   }
 
-  .ag-theme-quartz {
+  /* .ag-theme-quartz {
     --ag-foreground-color: #333;
     --ag-background-color: #ffffff;
     --ag-header-background-color: #202427;
     --ag-odd-row-background-color: #fafafa;
     --ag-header-foreground-color: #ffffff;
     --ag-border-color: #e0e0e0;
-  }
+  } */
 
   .ag-theme-quartz .ag-header-cell {
     font-weight: bold;
@@ -33,9 +33,9 @@
     padding: 8px;
   }
 
-  .ag-theme-quartz .ag-row-hover {
+  /* .ag-theme-quartz .ag-row-hover {
     background-color: #f0f0f0;
-  }
+  } */
 
 
   
