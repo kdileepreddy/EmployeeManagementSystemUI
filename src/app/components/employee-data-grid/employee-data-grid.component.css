@@ -15,6 +15,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
+.add-button-container {
+  align-self: flex-start;
+  margin: 10px 0 10px 5%;
+  button {      
+    background-color: #202427;
+    color: #fff;
+  }
+}
+
 
   /* .ag-theme-quartz {
     --ag-foreground-color: #333;
