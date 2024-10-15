@@ -12,7 +12,7 @@ export class AuthServiceService {
   private isAuthenticated: boolean = false;
   private currentUser: string | null = null;
   AccessToken: string | null = null;
-  private apiUrl = 'http://localhost:8080';
+  private apiUrl = 'https://employeemanagementsystem-4t3p.onrender.com';
 
   constructor(private http: HttpClient) { }
 
