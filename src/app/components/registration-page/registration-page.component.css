@@ -1,0 +1,62 @@
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #202427;
+}
+
+.registration-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-title {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+mat-card-header {
+  margin-bottom: 20px;
+}
+
+mat-card-title {
+  font-size: 24px;
+  color: #202427;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 48%;
+}
+
+button[color="primary"] {
+  background-color: #202427;
+  color: #fff;
+}
+
+button[color="accent"] {
+  color: #202427;
+  border-color: #202427;
+}

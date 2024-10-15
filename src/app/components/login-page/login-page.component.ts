@@ -1,34 +1,41 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AuthServiceService } from '../../services/auth-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: '',
-  standalone: true,
-  imports: [MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, ReactiveFormsModule, CommonModule ],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
 export class LoginPageComponent {
-  username: FormControl;
-  password: FormControl;
+  loginForm: FormGroup;
+  authService = inject(AuthServiceService);
+  router = inject(Router);
 
-  constructor() {
-    this.username = new FormControl('', [Validators.required]);
-    this.password = new FormControl('', [Validators.required]);
+  constructor(private fb: FormBuilder) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
   }
 
   onSubmit() {
-    if (this.username.valid && this.password.valid) {
-      // Implement login logic here
-      console.log('Login submitted', {
-        username: this.username.value,
-        password: this.password.value
-      });
+    if (this.loginForm.valid) {
+      const { username, password } = this.loginForm.value;
+      this.authService.login(username, password).subscribe(
+        success => {
+          if (success) {
+            this.router.navigate(['dashboard']);
+          } else {
+            alert('Login failed. Please check your credentials.');
+          }
+        },
+        error => {
+          console.error('Login error:', error);
+          alert('An error occurred during login. Please try again.');
+        }
+      );
     }
   }
 

@@ -8,15 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-layout',
   templateUrl: './app-layout.component.html',
-  styleUrl: './app-layout.component.css',
-  standalone: true,
-  imports: [
-    MatSidenavModule,
-    HeaderComponent,
-    SidenavContentComponent,
-    RouterModule,
-    CommonModule    
-  ]
+  styleUrl: './app-layout.component.css'
 })
 export class AppLayoutComponent {
   sideBarOpen: boolean = true;
