@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
 
 import { routes } from './app.routes';
 import { AuthServiceService } from './services/auth-service.service';
@@ -47,7 +49,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule,
     MatDividerModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule,
+    MatOptionModule
 ],
   providers: [ AuthServiceService ],
   bootstrap: [AppComponent]

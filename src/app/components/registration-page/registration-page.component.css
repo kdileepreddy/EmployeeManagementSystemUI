@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #202427;
 }
 
@@ -59,4 +59,10 @@ button[color="primary"] {
 button[color="accent"] {
   color: #202427;
   border-color: #202427;
+}
+
+.disabled {
+  /* background-color: #ccc !important;
+  color: #666 !important; */
+  opacity: 0.5 !important;
 }

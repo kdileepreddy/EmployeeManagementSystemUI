@@ -20,6 +20,15 @@
           <mat-error *ngIf="registrationForm.get('email')!.hasError('email')">Please enter a valid email address</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
+          <mat-label>Current Designation</mat-label>
+          <mat-select placeholder="Select your current designation" formControlName="role">
+            <mat-option value="MANAGER">Manager</mat-option>       
+            <mat-option value="HRADMIN">HR</mat-option>
+            <mat-option value="EMPLOYEE">Employee</mat-option>
+          </mat-select>
+          <mat-error *ngIf="registrationForm.get('role')!.hasError('required')">Current designation is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
           <mat-label>Password</mat-label>
           <input matInput type="password" placeholder="Enter your password" required formControlName="password">
           <mat-error *ngIf="registrationForm.get('password')!.hasError('required')">Password is required</mat-error>
@@ -28,10 +37,10 @@
           <mat-label>Confirm Password</mat-label>
           <input matInput type="password" placeholder="Confirm your password" required formControlName="confirmPassword">
           <mat-error *ngIf="registrationForm.get('confirmPassword')!.hasError('required')">Password confirmation is required</mat-error>
-          <mat-error *ngIf="registrationForm.get('confirmPassword')!.hasError('passwordMismatch')">Passwords do not match</mat-error>
+          <mat-error *ngIf="registrationForm.get('confirmPassword')!.hasError('mismatch')">Passwords do not match</mat-error>
         </mat-form-field>
         <div class="button-container">
-          <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.valid">Register</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.valid" [class.disabled]="!registrationForm.valid">Register</button>
           <button mat-stroked-button color="accent" type="button" [routerLink]="['/login']">Back to Login</button>
         </div>
       </form>

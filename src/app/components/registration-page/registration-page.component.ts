@@ -23,7 +23,8 @@ export class RegistrationPageComponent implements OnInit {
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
-      confirmPassword: ['', Validators.required]
+      confirmPassword: ['', Validators.required],
+      role: ['', Validators.required]
     }, { validator: this.passwordMismatchValidator });
   }
 
@@ -47,7 +48,7 @@ export class RegistrationPageComponent implements OnInit {
       this.registrationForm.get('confirmPassword')!.setErrors({ 'mismatch': true });
     } else {
       this.registrationForm.get('confirmPassword')!.setErrors(null);
-      this.authService.register(this.registrationForm.get('username')!.value!, this.registrationForm.get('email')!.value!, this.registrationForm.get('password')!.value!).subscribe(
+      this.authService.register(this.registrationForm).subscribe(
         (success) => {
           if (success) {
             this.showAlert('Registration successful. Please login.', 'success');

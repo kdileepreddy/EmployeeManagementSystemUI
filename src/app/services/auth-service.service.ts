@@ -4,6 +4,7 @@ import { catchError, map, Observable, of } from 'rxjs';
 import { LoginRequest } from '../Interfaces/LoginRequest';
 import { RegistrationRequest } from '../Interfaces/registrationRequest';
 import { LoginResponse } from '../Interfaces/LoginResponse';
+import { AbstractControl, FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -35,8 +36,9 @@ export class AuthServiceService {
     );
   }
 
-  register(username: string, email: string, password: string): Observable<boolean> {
-    const registrationRequest: RegistrationRequest = new RegistrationRequest(username, email, password);
+  register(formValues: FormGroup): Observable<boolean> {
+    const values = formValues.value;
+    const registrationRequest: RegistrationRequest = new RegistrationRequest(values.username, values.email, values.password, values.role);
     return this.http.post<RegistrationRequest>(`${this.apiUrl}/register`, registrationRequest).pipe(
       map(response => {
         if (response.username) {
